@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Navbar */
+    .navbar {
+      background-color: #0d121f;
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    .navbar .nav-link:hover {
+      color: #00d9ff !important;
+    }
+   
+    /* Hero Section */
+    #typing-text {
+  color: #00d9ff;
+  font-weight: bold;
+  border-right: 2px solid #00d9ff;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #0b0f1a;
+      color: #fff;
+      padding: 50px 0;
+    }
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero-content h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00d9ff;
+    }
+    .hero-content p {
+      margin-top: 15px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .hero-content .btn {
+      margin-top: 20px;
+      background: #00d9ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: 0.3s;
+    }
+    .hero-content .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 8px;
+      font-size: 1.0rem;
+      color: #00d9ff;
+      border: 1px solid #00d9ff;
+      border-radius: 50%;
+      padding: 5px 10px ;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      background: #00d9ff;
+      color: #000;
+    }
+    .hero-img img {
+      width: 400px;
+      border-radius: 50%;
+      border: 2px solid #00d9ff;
+      box-shadow: 0px 0px 25px #00d9ff;
+    }
+ 
+    /* About Section */
+    
+
+    .Kashish-image{
+      border: 2px solid #00d9ff;
+      box-shadow: 0px 0px 25px #00d9ff; 
+    }
+
+    #about {
+      padding: 80px 0;
+      background: #0b0f1a;
+      color: #fff;
+      
+    }
+    #about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00d9ff;
+    }
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+ 
+    /* Services Section */
+    #services {
+      padding: 80px 0;
+      background: #0b0f1a;
+      color: #fff;
+      text-align: center;
+    }
+    #services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #00d9ff;
+    }
+    .service-box {
+      background: #0d121f;
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+      height: 100%;
+    }
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 0px 20px #00d9ff;
+    }
+    .service-box i {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00d9ff;
+    }
+    .service-box h4 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .service-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .service-box .btn {
+      margin-top: 15px;
+      background: #00d9ff;
+      color: #000;
+      border-radius: 30px;
+      padding: 8px 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .service-box .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+ 
+    /* Latest Projects */
+.projects {
+  padding: 80px 0;
+  background: #0b0f1a;
+  color: #fff;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #00d9ff;
+}
+.project-card {
+  background: #0d121f;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  height: 100%;
+  text-align: left;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px #00d9ff;
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #00d9ff;
+  font-weight: bold;
+}
+.project-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+    /* Contact Section */
+    #contact {
+      padding: 80px 0;
+      background: #0b0f1a;
+      color: #fff;
+    }
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00d9ff;
+    }
+    .contact-info p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .contact-info i {
+      color: #00d9ff;
+      margin-right: 10px;
+    }
+    .contact-form input, .contact-form textarea {
+      background: #333;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 15px;
+      color: #fff;
+      width: 100%;
+    }
+    .contact-form input::placeholder, 
+    .contact-form textarea::placeholder {
+      color: #aaa;
+    }
+    .contact-form button {
+      width: 100%;
+      background: #00e5ff;
+      border: none;
+      border-radius: 30px;
+      padding: 12px;
+      font-weight: bold;
+      color: #000;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+     /* Footer */
+    footer {
+      background-color: #0d314f;
+      color: white;
+      text-align: center;
+      padding: 20px 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    footer a {
+      color: #00e6e6;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Skills Section */
+    #skills {
+  padding: 80px 0;
+  background: #0b0f1a;
+  color: #fff;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00e6e6; /* golden look */
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+
+.skill-name {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.skill-bar {
+  position: relative;
+  height: 3px;
+  background: #444;
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.skill-fill {
+  height: 3px;
+  background: #00e6e6;
+  position: relative;
+  border-radius: 4px;
+}
+
+.skill-percent {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  background: #00e6e6;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.skill-percent::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #00e6e6 transparent transparent transparent;
+}
+
+  </style>
+</head>
+<body>
+ 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- Download CV Button -->
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-sm" href="Kashish shah CV.pdf" download 
+               style="background:#00d9ff; color:#000; font-weight:600; border-radius:20px; padding:6px 16px;">
+              <i class="fas fa-download me-1"></i> Download CV
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
+    <div class="hero-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Kashish Shah</h1>
+      <h2>And I'm a <span id="typing-text"></span></h2>
+      <p style="text-align: justify;">
+        I’m a detail-oriented developer with expertise in WordPress, Python, and Django, skilled at building responsive websites, automation tools, and AI-driven solutions. With experience in designing custom themes, optimizing performance, and enhancing user experience, I focus on creating clean, efficient, and impactful digital products that solve real problems.<br>
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/shahkashish_26/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/kashish-shah-k2002/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <a href="#about" class="btn">More About Me</a>
+    </div>
+    <div class="hero-img mt-4 mt-lg-0">
+      <img src="Kashish Shah.jpeg" alt="Profile Image">
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row image-text align-items-center">
+        <div class="col-lg-5 Kashish-image">
+          <img src="14 (2).png" alt="About Image" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h2>About Me</h2>
+          <p style="text-align: justify;">
+            I’m Kashish Shah, a passionate "Python & WordPress Developer" with a Bachelor’s degree in "Computer Engineering" from Gujarat Technological University. Over the past few years, I’ve gained hands-on experience working with JMS Advisory Services and Yashvi Global, where I developed and maintained dynamic websites, optimized performance, and built automation tools using Python. My journey also includes creating AI-based solutions, customizing WordPress themes and plugins, and delivering responsive web designs. I enjoy solving complex problems, continuously improving my skills, and building digital products that are modern, user-friendly, and impactful.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+<section id="skills">
+  <div class="container">
+    <h2 class="text-center">My Skills</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">HTML</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:95%;">
+              <span class="skill-percent">95%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">CSS</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:90%;">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:80%;">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more skills below -->
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:90%;">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">Django</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:85%;">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">WordPress (Themes & Plugins)</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:88%;">
+              <span class="skill-percent">88%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">MySQL</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:80%;">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">PHP (WordPress Back-end)</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:75%;">
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill">
+          <span class="skill-name">UI/UX Design</span>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:85%;">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ 
+<!-- Services Section -->
+<section id="services">
+  <div class="container">
+    <h2>My Services</h2>
+    <div class="row g-4">
+      <!-- Website Development -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-code"></i>
+          <h4>Website Development</h4>
+          <p>
+            I design and develop responsive, high-performance websites using modern technologies. 
+            From business websites to LMS platforms, I deliver clean, optimized, and user-friendly 
+            solutions tailored to client needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Python & Django Development -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-database"></i>
+          <h4>Python & Django Development</h4>
+          <p>
+            I build dynamic web applications and automation tools using Python and Django. 
+            With expertise in MySQL and back-end logic, I create secure, scalable, and efficient 
+            applications that solve real-world problems.
+          </p>
+        </div>
+      </div>
+
+      <!-- Custom Software Development -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-laptop-code"></i>
+          <h4>Custom Software Development</h4>
+          <p>
+            I develop tailored software solutions designed to meet unique business needs. 
+            By integrating AI into custom applications, I deliver smarter, faster, and more 
+            efficient systems that improve decision-making and automate complex tasks.
+          </p>
+        </div>
+      </div>
+
+      <!-- AI-Powered Solutions -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-robot"></i>
+          <h4>AI-Powered Solutions</h4>
+          <p>
+            I create intelligent tools and automation systems using Python and AI technologies. 
+            From CV generators to smart integrations, I build innovative solutions that enhance 
+            productivity and efficiency.
+          </p>
+        </div>
+      </div>
+
+      <!-- UI/UX & Performance Optimization -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-pencil-ruler"></i>
+          <h4>UI/UX & Performance Optimization</h4>
+          <p>
+            I enhance websites with modern UI/UX design principles, responsive layouts, and 
+            performance improvements to deliver smooth, engaging, and user-friendly experiences.
+          </p>
+        </div>
+      </div>
+
+      <!-- SEO & Security -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-shield-alt"></i>
+          <h4>SEO & Security</h4>
+          <p>
+            I implement SEO strategies and security best practices to improve visibility and 
+            safeguard websites from vulnerabilities, ensuring long-term growth and safety.
+          </p>
+        </div>
+      </div>
+
+      <!-- Website Maintenance -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-tools"></i>
+          <h4>Website Maintenance</h4>
+          <p>
+            I provide ongoing support, updates, and performance monitoring to keep websites 
+            secure, reliable, and aligned with the latest industry standards.
+          </p>
+        </div>
+      </div>
+
+      <!-- LMS Development -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-graduation-cap"></i>
+          <h4>LMS Development</h4>
+          <p>
+            I design and develop Learning Management Systems (LMS) to provide seamless 
+            e-learning experiences, including video integration, study material, and user management.
+          </p>
+        </div>
+      </div>
+
+      <!-- Social Media & Digital Presence -->
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="fas fa-bullhorn"></i>
+          <h4>Social Media & Digital Presence</h4>
+          <p>
+            I help businesses grow their digital presence by managing social media platforms, 
+            creating engaging content, and improving brand visibility online.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Latest Projects -->
+<section class="projects" id="projects">
+  <div class="container">
+    <h2>Latest <span>Projects</span></h2>
+    <div class="row g-4">
+
+      <!-- JMS Tech -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://jmstech.co" 
+               alt="JMS Tech" class="img-fluid rounded mb-3">
+          <h3>JMS Tech</h3>
+          <p class="flex-grow-1">A corporate website for JMS Tech showcasing services, solutions, and digital presence.</p>
+          <a href="https://jmstech.co" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- JMS Advisory -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://jmsadvisory.in" 
+               alt="JMS Advisory" class="img-fluid rounded mb-3">
+          <h3>JMS Advisory</h3>
+          <p class="flex-grow-1">A professional consultancy website built with WordPress, featuring services and client solutions.</p>
+          <a href="https://jmsadvisory.in" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- JMS Training (LMS) -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://jmstraining.in" 
+               alt="JMS Training" class="img-fluid rounded mb-3">
+          <h3>JMS Training (LMS)</h3>
+          <p class="flex-grow-1">An e-learning platform with video courses, study materials, and user-friendly LMS features.</p>
+          <a href="https://jmstraining.in" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Home Sukoon -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://homesukoon.com" 
+               alt="Home Sukoon" class="img-fluid rounded mb-3">
+          <h3>Home Sukoon</h3>
+          <p class="flex-grow-1">A real estate and interior design website showcasing modern housing and lifestyle solutions.</p>
+          <a href="https://homesukoon.com" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Hire with JMS -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://hirewithjms.com" 
+               alt="Hire with JMS" class="img-fluid rounded mb-3">
+          <h3>Hire with JMS</h3>
+          <p class="flex-grow-1">A recruitment platform that connects companies with candidates, featuring job postings and applications.</p>
+          <a href="https://hirewithjms.com" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Prayosha Jewels -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://prayoshajewels.com" 
+               alt="Prayosha Jewels" class="img-fluid rounded mb-3">
+          <h3>Prayosha Jewels</h3>
+          <p class="flex-grow-1">A jewelry business website designed with WordPress and Elementor to showcase elegant collections.</p>
+          <a href="https://prayoshajewels.com" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Posh 2013 -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://posh2013.in" 
+               alt="Posh 2013" class="img-fluid rounded mb-3">
+          <h3>Posh 2013</h3>
+          <p class="flex-grow-1">A WordPress-based website for POSH services, offering awareness and compliance resources.</p>
+          <a href="https://posh2013.in" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Agriculture College (Australia) -->
+      <div class="col-md-4">
+        <div class="project-card p-3 h-100 d-flex flex-column">
+          <img src="https://image.thum.io/get/width/600/crop/800/https://yashviglobal.com/tempdemo/" 
+               alt="Agriculture College Australia" class="img-fluid rounded mb-3">
+          <h3>Agriculture College (Australia)</h3>
+          <p class="flex-grow-1">An educational website developed for an Agriculture College in Australia, featuring course details, admissions, and student resources with a clean and responsive design.</p>
+          <a href="https://yashviglobal.com/tempdemo/" target="_blank" class="btn btn-sm mt-auto" style="background:#00d9ff; color:#000; border-radius:20px;">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-md-6 contact-info">
+        <h2>Contact <span>Me</span></h2>
+        <h5>Let’s Build Something Amazing !!</h5>
+        <p style="text-align: justify;">
+          I’m always open to collaborating on exciting projects. Whether it’s developing a responsive website, 
+          building a custom software solution with AI integration, or optimizing an existing application, 
+          I’m here to help turn ideas into impactful digital solutions. Let’s connect and create something great together!
+        </p>
+        <p><i class="fas fa-envelope"></i> shahkashish2002@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +919724953380</p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form id="contactForm" class="contact-form" novalidate>
+          <input type="text" name="name" placeholder="Enter Your Name" required>
+          <input type="email" name="email" placeholder="Enter Your Email" required>
+          <input type="text" name="subject" placeholder="Enter Your Subject" required>
+          <textarea name="message" rows="5" placeholder="Enter Your Message" required></textarea>
+
+          <button type="submit" id="submitBtn">Submit</button>
+
+          <!-- Inline error (no redirect) -->
+          <div id="formAlert" class="mt-3" style="display:none; background:#b02a37; color:#fff; padding:10px 12px; border-radius:8px;">
+            ❌ Something went wrong. Please try again.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Popup (Bootstrap Modal) -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background:#0d121f; color:#fff; border:1px solid #00d9ff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Message Sent ✅</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Thank you! Your message has been sent successfully. I’ll get back to you soon.
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn" style="background:#00e5ff; color:#000;" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Footer -->
+  <footer>
+    <p class="m-0">Developed with ❤️ by <a href="#">Kashish Shah</a></p>
+  </footer>
+ 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+(function () {
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const alertBox = document.getElementById('formAlert');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // UI: disable button + spinner
+    const original = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending... <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>';
+    alertBox.style.display = 'none';
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch('https://formcarry.com/s/gXcC73w-9ju', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        // Show success popup (requires Bootstrap JS bundle)
+        const modal = new bootstrap.Modal(document.getElementById('successModal'));
+        modal.show();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        alertBox.textContent = (data && data.message) ? data.message : '❌ Something went wrong. Please try again.';
+        alertBox.style.display = 'block';
+      }
+    } catch (err) {
+      alertBox.textContent = '⚠️ Network error. Please try again.';
+      alertBox.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = original;
+    }
+  });
+})();
+</script>
+<script>
+  const roles = [ "Python Developer" , "WordPress Developer"];
+  let roleIndex = 0;
+  let charIndex = 0;
+  let typingElement = document.getElementById("typing-text");
+  let typingSpeed = 120; 
+  let erasingSpeed = 80;
+  let delayBetweenRoles = 1500;
+
+  function typeEffect() {
+    if (charIndex < roles[roleIndex].length) {
+      typingElement.textContent += roles[roleIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, typingSpeed);
+    } else {
+      setTimeout(eraseEffect, delayBetweenRoles);
+    }
+  }
+
+  function eraseEffect() {
+    if (charIndex > 0) {
+      typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseEffect, erasingSpeed);
+    } else {
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeEffect, typingSpeed);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (roles.length) setTimeout(typeEffect, delayBetweenRoles);
+  });
+</script>
+<!-- <script>
+const track = document.querySelector('.project-track');        // scrollable wrapper
+const container = document.querySelector('.project-container'); // animated inner row
+const leftBtn = document.querySelector('.arrow.left');
+const rightBtn = document.querySelector('.arrow.right');
+
+function pauseAuto() {
+  // pause the CSS marquee so manual scroll is visible
+  container.style.animationPlayState = 'paused';
+}
+
+function cardStep() {
+  const card = document.querySelector('.project-card');
+  // one card width + gap (gap is 25px in CSS)
+  return (card ? card.offsetWidth : 480) + 25;
+}
+
+leftBtn.addEventListener('click', () => {
+  pauseAuto();
+  track.scrollBy({ left: -cardStep(), behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  pauseAuto();
+  track.scrollBy({ left: cardStep(), behavior: 'smooth' });
+});
+
+// Optional: pause auto-scroll while hovering the carousel (keeps your design)
+track.addEventListener('mouseenter', () => container.style.animationPlayState = 'paused');
+track.addEventListener('mouseleave',  () => container.style.animationPlayState = 'running');
+</script> -->
+</body>
+</html>
